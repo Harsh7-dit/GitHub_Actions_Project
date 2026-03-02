@@ -1,7 +1,7 @@
 # GitHub_Actions_Project
 CI CD Using Github Actions
 
-Instructions (YAML)
+## Instructions (YAML)
 
 1. Whenever there is a PUSH 
 2. SSH into my server
@@ -12,18 +12,44 @@ Instructions (YAML)
 
 Installation :-
 
-// Node application
+## Node application
+
 npm init
-npm i express #Express Application 
+
+npm i express #Express Application
+ 
 npm i @types/express -D # Dev dependency
 
-// Dockerization
+## Dockerization
+
 Dockerfile
+
 docker build -t api .
+
 docker run -it --rm -p 8080:8080 api
 
-// Docker compose 
+## Docker compose 
+
 docker compose up -d
+
 docker compose down
 
-npx gitignore Node = This will create a git ignore file to exclude the files such as packages,logs, 
+## Node Ignore
+
+npx gitignore Node = This will create a git ignore file to exclude the files such as packages,logs.
+
+## Github Actions 
+
+Make a .github/workflows in that make a .yaml file, make this at root folder
+
+## SSH Connection 
+
+Copy the public key from your local system into the remote(production) server.
+
+Copy the private key from your local system into the github action file (.yaml) or github secerts 
+
+## Github Actions 
+
+When you push the updated code from local system, the github action deployment starts.
+
+
